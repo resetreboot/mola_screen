@@ -57,18 +57,65 @@ o bien presionar _Enter_ para comenzar a usarlo.
 
 Lo siguiente que veréis es el _prompt_ de vuestro intérprete de comandos
 y parecerá que nada ha cambiado. Pero probad a entrar en algún directorio y 
-luego un `ls` para obtener el listado de ficheros. Después, pulsad `Ctrl-A`
+luego un `ls` para obtener el listado de ficheros. Después, pulsad `Ctrl-a`
 y justo después la tecla `c`. El listado de ficheros habrá desaparecido y
 de nuevo el _prompt_ os saludará. Hemos abierto una nueva ventana, para hacer
 otra cosa sin mayor problema. ¿Cómo recuperamos ese listado que estábamos
-mirando? Pulsamos `Ctrl-A` y luego la tecla `0`. En _Screen_ las ventanas que
+mirando? Pulsamos `Ctrl-a` y luego la tecla `0`. En _Screen_ las ventanas que
 vamos creando se numeran del 0 al número de ventanas que necesitamos. La
-primera es el 0, la nueva es el 1. Así, que pulsando `Ctrl-A` y luego la tecla
+primera es el 0, la nueva es el 1. Así, que pulsando `Ctrl-a` y luego la tecla
 `1` recuperaremos el _prompt_ nuevo que hemos creado.
 
 Como se puede ver, _Screen_ procura no molestarte poniendo más cosas en la 
 pantalla, pero cuando tengas un buen puñado de ventanas abiertas, a veces te
-preguntarás en cual de ellas estas. `Ctrl-A` y luego `w` te mostrará un
+preguntarás en cual de ellas estas. `Ctrl-a` y luego `w` te mostrará un
 listado de ventanas, con el número o **el nombre** de las ventanas abiertas,
 con el nombre del proceso que funciona dentro de esa ventana y un `*` que te
 indica en qué ventana estas.
+
+Puede suceder que tener un `(1)\*bash $` como nombre de una ventana no 
+resulte muy descriptivo, pero _Screen_ nos permite darles nombres a las 
+ventanas, con `Ctrl-a` y luego `A` (ojo, mayúscula) podremos bautizar a la 
+ventana actual con el nombre que deseemos. Así, al pedir el listado de 
+ventanas, veremos sus nombres y podremos identificarlas rápidamente.
+
+Pantalla partida
+----------------
+
+_Screen_ permite tener más de una ventana en nuestra pantalla, de forma que
+puedas tener más de una consola o programa a la vez, y así controlar diversos
+procesos sin mayor problema. Un gran ejemplo de este funcionamiento es el
+plugin de _user list_ para `irssi`, que requiere de _Screen_ para funcionar,
+partiendo la pantalla en dos partes; `irssi` y la salida del plugin, en
+vertical.
+
+La forma básica de gestionar ventanas es la siguiente.
+
+* `Ctrl-a` + `S`: Divide la pantalla en dos, horizontalmente.
+* `Ctrl-a` + `<Tab>`: Pasa de una ventana a la siguiente.
+* `Ctrl-a` + `Q`: Elimina todas las particiones y te deja con una sola.
+* `Ctrl-a` + `X`: Elimina la partición actual.
+
+Sesiones
+--------
+
+Ya he comentado las funciones de _detach_, como la que uso en un servidor de
+Minecraft que llevo. Esta hecho en Java y Notch (el creador) no le ha puesto
+un modo _daemon_ que permita lanzarlo sin tener una salida por consola. Pues
+bien, gracias a _Screen_ lanzo el servidor, tengo la consola de control y con
+`Ctrl-a` y luego la tecla `d` la sesión se desacopla de la consola y puedo
+cerrar mi sesión de SSH con el servidor, sabiendo que el programa continúa 
+funcionando. Cuando deseo reiniciar el servidor, o bien lanzar algún comando,
+sólo tengo que invocar a _Screen_ tal que así:
+
+    `$ screen -r`
+
+Que le indica que deseo reconectar con la sesión que tengo iniciada en alguna
+parte. El problema viene cuando tienes más de una sesión de _Screen_ iniciada
+e intentas recuperar alguna. El programa te avisará de que tienes más de una
+sesión y que debes de indicarle el nombre de la sesión que deseas recuperar
+justo después del parámetro `-r`.
+
+Además, si sueles tener varias sesiones de _Screen_ en tu servidor, y las
+abres y cierras constantemente `screen -ls` te listará las sesiones abiertas
+actualmente, y asi escoger la que realmente quieres recuperar.
