@@ -20,8 +20,10 @@ el culo de los _lusers_.
 
 Puedes leerlo, probar las cosas que cuento aquí, puedes coger el código
 fuente y alterarlo a placer, ya que este texto esta licenciado bajo una
-`INSERTAR CREATIVE COMMONS AQUI` y podéis conseguir el fichero Markdown de
-este documento (su código fuente) en `INSERTAR ENLACE GITHUB`.
+**Creative Commons 3.0 BY-SA** 
+[![Creative Commons License](http://i.creativecommons.org/l/by-sa/3.0/80x15.png)](http://creativecommons.org/licenses/by-sa/3.0/deed.es_ES)
+y podéis conseguir el fichero Markdown de este documento (su código fuente) 
+en <https:////github.com/resetreboot/mola_screen>.
 
 GNU Screen: ¿Para qué sirve?
 ----------------------------
