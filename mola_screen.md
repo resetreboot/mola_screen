@@ -20,7 +20,7 @@ fuente y alterarlo a placer, ya que este texto esta licenciado bajo una
 **Creative Commons 3.0 BY-SA** 
 [![Creative Commons License](http://i.creativecommons.org/l/by-sa/3.0/80x15.png)](http://creativecommons.org/licenses/by-sa/3.0/deed.es_ES)
 y podéis conseguir el fichero Markdown de este documento (su código fuente) 
-en <https:////github.com/resetreboot/mola_screen>.
+en <https://github.com/resetreboot/mola_screen>.
 
 ## GNU Screen: ¿Para qué sirve?
 
@@ -46,9 +46,13 @@ volvamos y la enganchemos de nuevo, como si no hubiera pasado nada.
 ## Primeros pasos
 
 Lanzar *Screen* es tan sencillo como teclear en nuestra línea de comandos
-favorita `$ screen` y nos saludará con una pantalla con la versión, la 
-licencia y nos invita a pulsar la barra espaciadora para que nos cuente más
-o bien presionar *Enter* para comenzar a usarlo.
+favorita
+
+    $ screen 
+
+y nos saludará con una pantalla con la versión, la licencia y nos invita 
+a pulsar la barra espaciadora para que nos cuente más o bien presionar 
+*Enter* para comenzar a usarlo.
 
 Lo siguiente que veréis es el *prompt* de vuestro intérprete de comandos
 y parecerá que nada ha cambiado. Pero probad a entrar en algún directorio y 
@@ -144,3 +148,13 @@ pulsad `ESC` de nuevo.
 
 Si te has decidido a copiar algo, para poder pegarlo hay que pulsar 
 `Ctrl-a` + `] ` y aparecerá a partir de la posición actual del cursor. 
+
+## Conclusión
+
+Pues, con esto podéis empezar a explotar el potencial de *Screen* y aprovechar
+sus capacidades para haceros la vida un poquito más sencilla.
+
+Si deseáis explorar más, la lista completa de comandos se puede obtener con
+la combinación `Ctrl-a` + `?` y obtendréis la ayuda de *Screen*.
+
+Happy hacking!
